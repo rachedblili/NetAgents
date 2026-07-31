@@ -130,6 +130,19 @@
     "dateVerified": "2026-07-31"
   },
   {
+    "id": "NA-026",
+    "category": "overlay",
+    "name": "Fabrix.ai Network Observability",
+    "maker": "Fabrix.ai",
+    "statusClass": "shipping",
+    "statusLabel": "shipping",
+    "description": "A vendor-agnostic observability layer, not a single-purpose agent: it ingests network, application, and infrastructure telemetry through more than a thousand pre-built connectors (Cisco, Juniper, Arista, Prometheus, Datadog, and others), correlates events across domains to find root cause, and can trigger closed-loop remediation through Ansible, Python, or Cisco NSO playbooks. It's the underlying data and telemetry platform the narrower NetOps/AIOps agents in the specialized catalog below run on.",
+    "tags": "multi-vendor · closed-loop remediation",
+    "url": "https://www.fabrix.ai/network-observability/",
+    "search": "fabrix network observability data fabric rdaf telemetry pipeline multi-vendor closed-loop remediation ansible cisco nso",
+    "dateVerified": "2026-07-31"
+  },
+  {
     "id": "NA-011",
     "category": "security",
     "name": "Precision AI / Strata Copilot",
