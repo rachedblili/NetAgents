@@ -327,8 +327,9 @@ main > section + section, .main-col > section + section { border-top: 1px solid 
 .site-footer .wrap { display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
 .site-footer p { color: var(--color-muted); margin: 0.3rem 0; font-size: 0.85rem; }
 .footer-disclosure { max-width: 42ch; }
-.footer-links { display: flex; gap: 1rem; list-style: none; padding: 0; margin: 0; flex-wrap: wrap; font-family: var(--font-mono); }
-.footer-links a { color: var(--color-muted); font-size: 0.82rem; }
+.footer-links { display: flex; list-style: none; padding: 0; margin: 0; flex-wrap: wrap; font-family: var(--font-mono); }
+.footer-links li:not(:last-child)::after { content: "·"; margin: 0 0.75rem; color: var(--color-border); }
+.footer-links a { color: var(--color-amber); font-size: 0.82rem; }
 
 @media (max-width: 640px) {
   .site-footer .wrap { flex-direction: column; }

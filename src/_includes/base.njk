@@ -8,14 +8,14 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ ogTitle or title }}">
 <meta property="og:description" content="{{ ogDescription or description }}">
-<meta property="og:image" content="/assets/images/og-cover.png">
+<meta property="og:image" content="{{ metadata.url }}/assets/images/og-cover.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ ogTitle or title }}">
 <meta name="twitter:description" content="{{ ogDescription or description }}">
-<meta name="twitter:image" content="/assets/images/og-cover.png">
+<meta name="twitter:image" content="{{ metadata.url }}/assets/images/og-cover.png">
 <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
 <link rel="apple-touch-icon" href="/assets/images/icon-512.png">
-<link rel="stylesheet" href="/assets/css/style.css?v=4">
+<link rel="stylesheet" href="/assets/css/style.css?v=6">
 {% block head_extra %}{% endblock %}
 </head>
 <body>
@@ -71,7 +71,7 @@
   <div class="wrap {% if wideFooter %}wrap-wide{% endif %}">
     <div class="footer-disclosure">
       <p><strong>NetAgents</strong></p>
-      <p>An independent resource for people building, deploying, or just trying to understand AI agents in computer networking. I don't take money from anyone listed here, with <a href="/about/#disclosure">one disclosed exception</a> &mdash; built and maintained by <a href="https://github.com/rachedblili" rel="noopener">Rached</a>.</p>
+      <p>An independent resource for people building, deploying, or just trying to understand AI agents in computer networking. No vendor sponsors this site or pays for placement, but I do have <a href="/about/#disclosure">one disclosed conflict of interest</a> &mdash; built and maintained by <a href="https://github.com/rachedblili" rel="noopener">Rached</a>.</p>
     </div>
     <ul class="footer-links">
       <li><a href="/directory/">Directory</a></li>

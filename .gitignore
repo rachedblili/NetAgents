@@ -9,3 +9,7 @@ deploy/
 # Session context for AI assistants -- untracked on purpose, since it
 # references the real server path/username, same reasoning as deploy/.
 CLAUDE.md
+
+# Raw AI-assisted research dump used to build the directory -- local
+# reference only, not cleaned up for public consumption.
+RESEARCH.md
