@@ -1,0 +1,10 @@
+{
+  "title": "NetAgents",
+  "subtitle": "A field guide to agentic AI in networking",
+  "url": "https://netagents.ai",
+  "feedUrl": "https://netagents.ai/feed.xml",
+  "author": {
+    "name": "Rached",
+    "email": "info@strikerit.com"
+  }
+}

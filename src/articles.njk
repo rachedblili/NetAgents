@@ -1,0 +1,44 @@
+---
+title: "Articles — NetAgents"
+description: "Essays on agentic AI in networking: the protocol layer, the security model, and the road from scripted automation to autonomous networks. Community write-ups welcome."
+navCurrent: articles
+wideFooter: true
+---
+{% extends "base.njk" %}
+
+{% block railnote %}Yours or a contributor's &mdash; see how to <a href="/about/#contribute">pitch one</a>.{% endblock %}
+
+{% block head_extra %}
+<link rel="alternate" type="application/rss+xml" title="NetAgents articles" href="/feed.xml">
+{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="wrap wrap-wide">
+    <span class="eyebrow">Articles</span>
+    <h1>Essays on agentic AI in networking</h1>
+    <p class="lede" style="max-width: 62ch;">Longer pieces than the directory entries allow for: how the protocol layer works, what changes about security, and how far along the industry actually is. <a href="/feed.xml">RSS available</a> if you'd rather follow along that way.</p>
+  </div>
+</section>
+
+<div class="wrap wrap-wide">
+<section class="entry-group">
+  <div class="entry-grid">
+    {% for post in collections.articles %}
+    <article class="entry">
+      <div class="entry-top">
+        <span class="entry-id">{{ post.data.date | readableDate }}</span>
+        {% if "community" in post.data.tags %}<span class="pill status-active">community</span>{% endif %}
+      </div>
+      <h3><a href="{{ post.url }}">{{ post.data.heading }}</a></h3>
+      <p class="desc">{{ post.data.summary }}</p>
+      <div class="entry-foot">
+        <span class="pill">{{ post.data.tags | join(" · ") }}</span>
+        <a class="entry-link" href="{{ post.url }}">read →</a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+</div>
+{% endblock %}

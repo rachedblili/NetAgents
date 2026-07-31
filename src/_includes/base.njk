@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ ogTitle or title }}">
+<meta property="og:description" content="{{ ogDescription or description }}">
+<meta property="og:image" content="/assets/images/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ ogTitle or title }}">
+<meta name="twitter:description" content="{{ ogDescription or description }}">
+<meta name="twitter:image" content="/assets/images/og-cover.png">
+<link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/images/icon-512.png">
+<link rel="stylesheet" href="/assets/css/style.css?v=4">
+{% block head_extra %}{% endblock %}
+</head>
+<body>
+<div class="shell">
+<aside class="rail">
+  <a class="brand" href="/">
+    <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <g stroke="currentColor" stroke-width="1.6" stroke-opacity="0.6" stroke-linecap="round">
+        <path d="M9 23 15 9"/><path d="M18 9 24 23"/><path d="M10 24 22 24"/>
+      </g>
+      <g fill="currentColor">
+        <circle cx="9" cy="23.5" r="2.6"/><circle cx="16.5" cy="7.5" r="2.6"/><circle cx="24" cy="23.5" r="2.6"/>
+      </g>
+    </svg>
+    <span class="wordmark">Net<span class="dim">Agents</span></span>
+  </a>
+  <nav aria-label="Primary">
+    <ul>
+      <li><a href="/" {% if navCurrent == "home" %}aria-current="page"{% endif %}>Home</a></li>
+      <li><a href="/directory/" {% if navCurrent == "directory" %}aria-current="page"{% endif %}>Directory</a></li>
+      <li><a href="/articles/" {% if navCurrent == "articles" %}aria-current="page"{% endif %}>Articles</a></li>
+      <li><a href="/about/" {% if navCurrent == "about" %}aria-current="page"{% endif %}>About</a></li>
+    </ul>
+  </nav>
+  <div class="rail-graphic" aria-hidden="true">
+    <svg viewBox="0 0 160 300" width="160" height="300" fill="none">
+      <g stroke="var(--color-amber)" stroke-width="1" stroke-opacity="0.35">
+        <path d="M20 20 70 10"/><path d="M70 10 130 40"/><path d="M70 10 40 70"/>
+        <path d="M130 40 100 90"/><path d="M40 70 100 90"/><path d="M40 70 30 140"/>
+        <path d="M100 90 150 120"/><path d="M100 90 90 160"/><path d="M30 140 90 160"/>
+        <path d="M90 160 60 200"/><path d="M90 160 120 220"/><path d="M60 200 25 250"/>
+        <path d="M120 220 85 270"/><path d="M25 250 85 270"/>
+      </g>
+      <g fill="var(--color-amber)">
+        <circle cx="20" cy="20" r="2.5" fill-opacity="0.5"/><circle cx="70" cy="10" r="3" fill-opacity="0.8"/>
+        <circle cx="130" cy="40" r="2.5" fill-opacity="0.5"/><circle cx="40" cy="70" r="3" fill-opacity="0.7"/>
+        <circle cx="100" cy="90" r="3.5" fill-opacity="0.9"/><circle cx="150" cy="120" r="2.5" fill-opacity="0.45"/>
+        <circle cx="30" cy="140" r="2.5" fill-opacity="0.5"/><circle cx="90" cy="160" r="3" fill-opacity="0.75"/>
+        <circle cx="60" cy="200" r="2.5" fill-opacity="0.5"/><circle cx="120" cy="220" r="2.5" fill-opacity="0.5"/>
+        <circle cx="25" cy="250" r="2.5" fill-opacity="0.45"/><circle cx="85" cy="270" r="3" fill-opacity="0.7"/>
+      </g>
+    </svg>
+  </div>
+  <p class="rail-note">{% block railnote %}{% endblock %}</p>
+</aside>
+
+<div class="main-col">
+<main>
+{% block content %}{% endblock %}
+</main>
+
+<footer class="site-footer">
+  <div class="wrap {% if wideFooter %}wrap-wide{% endif %}">
+    <div class="footer-disclosure">
+      <p><strong>NetAgents</strong></p>
+      <p>An independent resource for people building, deploying, or just trying to understand AI agents in computer networking. I don't take money from anyone listed here, with <a href="/about/#disclosure">one disclosed exception</a> &mdash; built and maintained by <a href="https://github.com/rachedblili" rel="noopener">Rached</a>.</p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="/directory/">Directory</a></li>
+      <li><a href="/articles/">Articles</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="https://github.com/rachedblili/NetAgents/issues/new/choose">Contribute</a></li>
+      <li><a href="mailto:info@strikerit.com?subject=NetAgents">Suggest a correction</a></li>
+    </ul>
+  </div>
+</footer>
+</div>
+</div>
+{% block scripts %}{% endblock %}
+</body>
+</html>

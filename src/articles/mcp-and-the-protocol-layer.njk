@@ -1,0 +1,40 @@
+---
+title: "MCP and the protocol layer — NetAgents"
+description: "What the Model Context Protocol actually does, why it matters for networking specifically, and where the early IETF drafts and community federation experiments stand."
+heading: "Why MCP matters for networking"
+summary: "Almost everything in the directory that isn't a closed vendor platform is wired together the same way: the Model Context Protocol, worth understanding on its own terms, separate from any specific product."
+date: 2026-07-22
+tags: ["core"]
+navCurrent: articles
+---
+{% extends "post.njk" %}
+
+{% block article %}
+<h2>What MCP actually is</h2>
+<p>The Model Context Protocol, released by Anthropic as an open standard, is a JSON-RPC 2.0 specification for connecting a language model to external tools, data, and prompts in a consistent way. That's a dry sentence for something that solved a real, annoying problem: before MCP, every integration between an AI application and an external system was custom-built. If you wanted Claude to check a routing table, someone had to write bespoke code for that specific model, that specific vendor's API, and that specific version of both.</p>
+<p>MCP standardizes the shape of that connection instead. A device or platform can expose a set of "tools" (things an agent can call, like <code>show_command</code> or <code>get_route_table</code>), "resources" (data an agent can read), and "prompts" (pre-built templates for common tasks). Any MCP-compatible client, whether that's Claude Desktop, an IDE, or a custom orchestration platform, can discover and use them without vendor-specific glue code. That's the whole idea, and it's a big part of why the open source directory of MCP servers has grown as fast as it has.</p>
+
+<h2>Why this matters more in networking than most domains</h2>
+<p>A language model has no innate awareness of your specific network. It knows general facts about BGP and general patterns in Junos syntax, but it has no idea what your topology looks like, what changed last Tuesday, or whether that firewall rule is actually in production. MCP is the piece that closes that gap: a server that exposes live, verified state (routing tables, interface counters, configuration) to a model that would otherwise be reasoning from training data alone.</p>
+<p>It also means the model can, in principle, act: not just read state, but push a configuration change, restart an interface, or trigger a packet capture. That's the useful part and the dangerous part at the same time. Several entries in the <a href="/directory/">directory</a> are explicitly about managing that tension: Itential keeps AI reasoning and execution in separate layers, IP Fabric keeps its MCP server read-only against a verified twin rather than a live device. Read <a href="/articles/security-and-risk/">the security page</a> before you wire up anything with write access.</p>
+
+<h2>Standards work is still early</h2>
+<p>The IETF and its research arm, the IRTF's Network Management Research Group, are actively looking at how MCP should extend into network equipment specifically. To be precise about what stage this is at: these are individual Internet-Drafts, submitted by their authors for discussion. None of them has IETF consensus, none has been adopted by a working group, and none is a standard you can build a production dependency on today. That will likely change over the next few years, but treat the specifics below as a sketch of where thinking is headed, not a spec to implement against.</p>
+
+<div class="note">
+  <span class="note-label">Worth noting</span>
+  <p><strong>draft-zw-opsawg-mcp-network-mgmt</strong> proposes letting routers and switches act as MCP servers directly, mapping MCP tools onto YANG datastore operations (get, edit-config, commit, rollback) under a <code>network:///</code> URI scheme, with everything carried over TLS. The illustrative example in the draft is a controller detecting a ping failure, invoking a <code>network.troubleshoot.ping-fail</code> prompt, having the agent run an ARP lookup over the exposed CLI tool, and returning a root cause without a human in the loop. <strong>draft-jadoon-nmrg-agentic-ai-autonomous-networks</strong> takes a broader research angle, proposing agents as first-class entities at each layer of the network stack that coordinate with each other while deterministic packet forwarding stays untouched underneath.</p>
+</div>
+
+<h2>Community federation experiments</h2>
+<p>Standards bodies aren't the only place this is being worked out. The open source project <a href="/directory/#opensource">NetClaw</a> takes a different approach to the same underlying problem: how do you avoid building one model that has to understand every vendor's syntax, every protocol, and every tool at once? Its answer is federation: a central agent routes a request to smaller, specialized agents, each scoped to one vendor or domain. It documents its own wire protocol for this, NCFED, as an individual IETF draft rather than an adopted standard, which is worth keeping in mind if you're evaluating it for anything beyond a lab.</p>
+<p>Whether that specific project succeeds or not, the underlying idea shows up repeatedly across this space: specialized agents with narrow tool access, coordinated by something else, instead of one model with hundreds of tools bolted on. It's also closely related to the tool-routing problem <a href="/directory/#opensource">ACE-Router</a> is studying academically.</p>
+
+<h2>A short glossary</h2>
+<ul>
+  <li><strong>YANG</strong> &mdash; a data modeling language used to describe network device configuration and state in a structured, machine-readable way.</li>
+  <li><strong>NETCONF</strong> &mdash; a protocol for retrieving and changing that configuration, often what an MCP server is quietly translating agent tool calls into.</li>
+  <li><strong>OpenConfig</strong> &mdash; a set of vendor-neutral YANG models, useful when an agent needs to talk to multi-vendor gear without vendor-specific translation for every device type.</li>
+  <li><strong>JSON-RPC 2.0</strong> &mdash; the lightweight remote-procedure-call format MCP itself is built on.</li>
+</ul>
+{% endblock %}

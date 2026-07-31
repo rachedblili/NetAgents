@@ -1,0 +1,30 @@
+name: Pitch a community article
+description: You've got a write-up on agentic networking worth sharing here.
+title: "[Article pitch] "
+labels: ["community-article"]
+body:
+  - type: input
+    id: topic
+    attributes:
+      label: Working title / topic
+    validations:
+      required: true
+  - type: textarea
+    id: pitch
+    attributes:
+      label: What's the piece about, and why does it belong here?
+    validations:
+      required: true
+  - type: input
+    id: draft
+    attributes:
+      label: Draft or existing write-up
+      description: A link if you've already written something, even rough.
+    validations:
+      required: false
+  - type: input
+    id: contact
+    attributes:
+      label: How should I credit / reach you?
+    validations:
+      required: true

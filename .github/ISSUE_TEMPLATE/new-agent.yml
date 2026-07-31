@@ -1,0 +1,44 @@
+name: Suggest a new agent or project
+description: Tell me about an agent, platform, or open source project that belongs in the directory.
+title: "[New agent] "
+labels: ["new-entry"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name
+    validations:
+      required: true
+  - type: input
+    id: maker
+    attributes:
+      label: Maker / maintainer
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Which category does it fit?
+      options:
+        - Full-stack vendor platform
+        - Observability & overlay
+        - Security-centric agent
+        - Specialized agent catalog
+        - Open source, community, or research
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Primary source
+      description: A link I can verify it against (product page, GitHub repo, IETF datatracker entry).
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: What does it actually do?
+      description: Plain-language description of its capabilities, not marketing copy.
+    validations:
+      required: true

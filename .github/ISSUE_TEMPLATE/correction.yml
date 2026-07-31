@@ -1,0 +1,27 @@
+name: Report a correction
+description: Something in the directory or an article is wrong, stale, or missing context.
+title: "[Correction] "
+labels: ["correction"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Where is it?
+      description: An entry ID (e.g. NA-014), an article title, or a URL on the site.
+      placeholder: "NA-014, Network Config Compliance Agent"
+    validations:
+      required: true
+  - type: textarea
+    id: whats-wrong
+    attributes:
+      label: What's wrong?
+      description: What's incorrect, out of date, or missing?
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: A link that backs up the correction, if you have one.
+    validations:
+      required: false

@@ -1,0 +1,92 @@
+---
+title: "Agent directory — NetAgents"
+description: "A grouped, filterable directory of AI agents and platforms in computer networking: full-stack vendor assistants, observability overlays, security agents, specialized agent catalogs, and open source or research projects."
+navCurrent: directory
+wideFooter: true
+---
+{% extends "base.njk" %}
+
+{% block railnote %}{{ agents.length }} entries, hand-checked against primary sources. See <a href="/about/">methodology</a>.{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="wrap wrap-wide">
+    <span class="eyebrow">Directory</span>
+    <h1>Agents and platforms, as they actually stand today</h1>
+    <p class="lede" style="max-width: 62ch;">Grouped by what each thing actually is, not by how it's marketed. Every entry links to a primary source. The status tag is a rough, honest read on maturity: whether it's a shipping product, something actively evolving, or an early community or research project. Vendor claims are their own; treat the status tags as this site's best judgment, not a guarantee.</p>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="wrap wrap-wide">
+    <div class="note">
+      <span class="note-label">Recently corrected</span>
+      {% for change in changelog | reverse %}
+      <p>{{ change.date | shortDate }} &mdash; {{ change.note }}{% if change.entryId %} (<a href="#{{ change.entryId }}">{{ change.entryId }}</a>){% endif %}{% if change.creditedTo %}, thanks to {{ change.creditedTo }}{% endif %}.</p>
+      {% endfor %}
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-chip is-active" data-filter="all" type="button">All</button>
+      {% for cat in categories %}
+      <button class="filter-chip" data-filter="{{ cat.id }}" type="button">{{ cat.title }}</button>
+      {% endfor %}
+      <input type="search" id="directory-search" placeholder="Search by name, maker, or keyword" aria-label="Search the directory">
+    </div>
+    <p class="filter-count" id="filter-count"></p>
+  </div>
+</section>
+
+<div class="wrap wrap-wide">
+
+{% for cat in categories %}
+<section class="entry-group" id="{{ cat.id }}">
+  <div class="entry-group-head">
+    <h2><img class="category-icon" src="/assets/images/{{ cat.icon }}" alt="" width="28" height="28">{{ cat.title }}</h2>
+    <p>{{ cat.description }}</p>
+  </div>
+  {% if cat.id == "specialized" %}
+  <div class="note">
+    <span class="note-label">Worth noting</span>
+    <p>Fabrix.ai is the clearest example of this pattern, with a public agent catalog spanning categories like NetOps, AIOps, SecOps, and Agent Ops. The exact number of agents in the catalog changes as they add more, so treat any specific count as a moving target rather than a fixed spec. A representative sample from the catalog is below.</p>
+  </div>
+  <div class="note">
+    <span class="note-label">Disclosure</span>
+    <p>I work at Fabrix.ai, so the six entries below aren't arm's length &mdash; see the <a href="/about/#disclosure">full disclosure</a>.</p>
+  </div>
+  {% endif %}
+  <div class="entry-grid">
+    {% for agent in agents %}
+    {% if agent.category == cat.id %}
+    <article class="entry" data-category="{{ agent.category }}" data-search="{{ agent.search }}">
+      <div class="entry-top"><span class="entry-id">{{ agent.id }}</span><span class="pill status-{{ agent.statusClass }}">{{ agent.statusLabel }}</span></div>
+      <h3>{{ agent.name }}</h3>
+      <p class="maker">{{ agent.maker }}</p>
+      <p class="desc">{{ agent.description }}</p>
+      <div class="entry-foot">
+        <span class="entry-meta">
+          <span class="pill">{{ agent.tags }}</span>
+          <span class="entry-verified">verified {{ agent.dateVerified | shortDate }}</span>
+        </span>
+        <a class="entry-link" href="{{ agent.url }}" rel="noopener">visit →</a>
+      </div>
+    </article>
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}
+
+</div>
+
+<section class="section-alt">
+  <div class="wrap prose">
+    <h2>Missing something?</h2>
+    <p>I maintain this directory by hand, so it won't stay complete on its own. If you know of an agent, project, or draft that belongs here, or something above is wrong or out of date, <a href="https://github.com/rachedblili/NetAgents/issues/new/choose">open an issue</a> or <a href="mailto:info@strikerit.com?subject=NetAgents%20directory">send a note</a>. Corrections that land get credited above. Being listed isn't an endorsement, and descriptions are summarized from public materials rather than hands-on testing unless noted.</p>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="/assets/js/directory.js"></script>
+{% endblock %}

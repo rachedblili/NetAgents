@@ -1,0 +1,116 @@
+---
+title: "NetAgents — a field guide to agentic AI in networking"
+description: "A working directory and plain-language guide to AI agents in computer networking: what vendors and open source projects are actually shipping, the protocols connecting them, and the security questions nobody has fully answered yet."
+navCurrent: home
+wideFooter: true
+---
+{% extends "base.njk" %}
+
+{% block railnote %}A living directory, corrected in the open. Found something wrong? <a href="mailto:info@strikerit.com?subject=NetAgents">Say so</a>.{% endblock %}
+
+{% block content %}
+<section class="hero hero-home">
+  <div class="hero-inner">
+    <div>
+      <span class="eyebrow">NetAgents</span>
+      <h1>A field guide to agentic AI in networking</h1>
+      <p class="lede">Every major networking vendor now ships something called an AI agent. Some of them reason step by step, call tools, and take real action on your infrastructure. Others are a chatbot wearing a new name tag. This site tries to tell the difference, and to keep a running account of the open source projects, protocols, and standards work happening underneath the announcements.</p>
+      <p><a class="btn" href="/directory/">Browse the directory</a> <a class="btn btn-outline" href="/about/">How this site works</a></p>
+    </div>
+    <div class="hero-graphic" aria-hidden="true">
+      <svg viewBox="0 0 340 300" width="340" height="300" fill="none">
+        <g stroke="var(--color-amber)" stroke-width="1" stroke-opacity="0.3">
+          <path d="M30 40 110 20"/><path d="M110 20 200 55"/><path d="M200 55 280 30"/>
+          <path d="M30 40 60 110"/><path d="M110 20 150 95"/><path d="M200 55 150 95"/>
+          <path d="M200 55 240 120"/><path d="M280 30 240 120"/><path d="M280 30 310 90"/>
+          <path d="M60 110 150 95"/><path d="M150 95 240 120"/><path d="M240 120 310 90"/>
+          <path d="M60 110 40 180"/><path d="M150 95 130 170"/><path d="M240 120 220 190"/>
+          <path d="M310 90 290 170"/><path d="M40 180 130 170"/><path d="M130 170 220 190"/>
+          <path d="M220 190 290 170"/><path d="M40 180 80 250"/><path d="M130 170 170 240"/>
+          <path d="M220 190 170 240"/><path d="M290 170 260 260"/><path d="M170 240 260 260"/>
+          <path d="M80 250 170 240"/>
+        </g>
+        <g fill="var(--color-amber)">
+          <circle cx="30" cy="40" r="3" fill-opacity="0.5"/><circle cx="110" cy="20" r="3.5" fill-opacity="0.75"/>
+          <circle cx="200" cy="55" r="4" fill-opacity="0.9"/><circle cx="280" cy="30" r="3" fill-opacity="0.55"/>
+          <circle cx="60" cy="110" r="3" fill-opacity="0.6"/><circle cx="150" cy="95" r="3.5" fill-opacity="0.8"/>
+          <circle cx="240" cy="120" r="3" fill-opacity="0.55"/><circle cx="310" cy="90" r="2.5" fill-opacity="0.45"/>
+          <circle cx="40" cy="180" r="3" fill-opacity="0.55"/><circle cx="130" cy="170" r="3.5" fill-opacity="0.75"/>
+          <circle cx="220" cy="190" r="3" fill-opacity="0.6"/><circle cx="290" cy="170" r="2.5" fill-opacity="0.45"/>
+          <circle cx="80" cy="250" r="2.5" fill-opacity="0.45"/><circle cx="170" cy="240" r="3" fill-opacity="0.6"/>
+          <circle cx="260" cy="260" r="2.5" fill-opacity="0.45"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <h2>What actually changed</h2>
+    <p>Network automation has gone through a few real shifts: scripted if/then automation in the 80s and 90s, machine-learning-driven anomaly detection through the 2010s, and generative AI chat interfaces earlier this decade that could explain a problem but not touch it. What's new now is agents that close the loop: they can look at telemetry, form a hypothesis, call a tool to check it, and in some cases make a change, all without a human clicking through each step.</p>
+    <p>That's useful for the boring, high-volume parts of network operations: chasing down why an access point went offline, correlating an alert across five dashboards, checking whether a proposed ACL change breaks something three hops away. It's also a real change in who, or what, has write access to your network, which is why this site spends as much time on the security and governance side as it does on the products themselves.</p>
+    <p><a href="/articles/road-to-autonomy/">Read the fuller history and where the industry actually stands on autonomy →</a></p>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="wrap wrap-wide">
+    <h2>Explore the directory</h2>
+    <p class="lede" style="max-width: 60ch;">Agents and platforms, grouped by what they actually are rather than how they're marketed.</p>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Full-stack vendor platforms</h3>
+        <p>Marvis, Cisco's AI Assistant, Arista AVA, and the assistants vendors are building directly into router and switch operating systems.</p>
+        <a class="card-link" href="/directory/#vendor">See these agents →</a>
+      </div>
+      <div class="card">
+        <h3>Observability &amp; overlay tools</h3>
+        <p>Vendor-agnostic platforms that sit above the network, correlating multi-vendor telemetry and proposing (or executing) changes.</p>
+        <a class="card-link" href="/directory/#overlay">See these agents →</a>
+      </div>
+      <div class="card">
+        <h3>Security-centric agents</h3>
+        <p>Agents built for threat detection, policy translation, and SOC triage rather than general operations.</p>
+        <a class="card-link" href="/directory/#security">See these agents →</a>
+      </div>
+      <div class="card">
+        <h3>Open source &amp; research</h3>
+        <p>MCP servers, community automation projects, and the academic work exploring how agents route tasks between each other.</p>
+        <a class="card-link" href="/directory/#opensource">See these agents →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap wrap-wide">
+    <h2>Three things worth understanding</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>The protocol underneath it</h3>
+        <p>Most of this only works because of the Model Context Protocol, and a handful of early IETF drafts trying to bring it to routers and switches directly.</p>
+        <a class="card-link" href="/articles/mcp-and-the-protocol-layer/">Read about MCP in networking →</a>
+      </div>
+      <div class="card">
+        <h3>The security model</h3>
+        <p>Giving a language model tool access to production infrastructure opens a new kind of attack surface, worth understanding before you deploy one.</p>
+        <a class="card-link" href="/articles/security-and-risk/">Read about the risks →</a>
+      </div>
+      <div class="card">
+        <h3>How far along we are</h3>
+        <p>Vendors talk about full autonomy. Most real deployments are still a few rungs down the ladder. TM Forum's autonomy levels are a useful way to calibrate the claims.</p>
+        <a class="card-link" href="/articles/road-to-autonomy/">Read about autonomy levels →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="wrap prose">
+    <h2>About this project</h2>
+    <p>NetAgents is a side project, not a product. I maintain it alone, with a background in network automation, and it started as a research pass through the (crowded, fast-moving, sometimes overhyped) landscape of AI agents in networking. If something here is wrong, out of date, or missing, I want to hear about it.</p>
+    <p><a href="/about/">More about how this site is put together →</a></p>
+  </div>
+</section>
+{% endblock %}

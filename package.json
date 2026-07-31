@@ -1,0 +1,14 @@
+{
+  "name": "netagents",
+  "private": true,
+  "version": "1.0.0",
+  "description": "NetAgents -- a field guide to agentic AI in networking",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-plugin-rss": "^2.0.2"
+  }
+}

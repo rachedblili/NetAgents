@@ -1,0 +1,32 @@
+[
+  {
+    "id": "vendor",
+    "icon": "icon-vendor.png",
+    "title": "Full-stack vendor platforms",
+    "description": "The deepest integrations come from vendors who control the hardware and telemetry pipeline end to end. These agents are built into the router, switch, and wireless operating systems themselves, which gives them access to signal a third-party tool doesn't get."
+  },
+  {
+    "id": "overlay",
+    "icon": "icon-overlay.png",
+    "title": "Observability & overlay platforms",
+    "description": "Vendor-agnostic tools that sit above a mixed-vendor environment, pulling in telemetry through open APIs and correlating across gear the vendor platforms above can't see into."
+  },
+  {
+    "id": "security",
+    "icon": "icon-security.png",
+    "title": "Security-centric agents",
+    "description": "Agents built specifically for threat detection and policy enforcement, where the tolerance for error is lower and the models involved are often purpose-trained rather than a general-purpose LLM."
+  },
+  {
+    "id": "specialized",
+    "icon": "icon-specialized.png",
+    "title": "Specialized agent catalogs",
+    "description": "Rather than one monolithic assistant, some platforms take a modular approach: dozens of narrowly scoped agents, each built for one specific task, that can be combined for a given workflow."
+  },
+  {
+    "id": "opensource",
+    "icon": "icon-opensource.png",
+    "title": "Open source, community & research",
+    "description": "The open source layer is where a lot of the real experimentation is happening, from official vendor tooling to weekend projects to academic papers on how agents should route work to each other."
+  }
+]

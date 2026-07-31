@@ -1,0 +1,62 @@
+---
+title: "The road to autonomy — NetAgents"
+description: "A short history of network automation from scripted rules to agentic AI, and an honest look at TM Forum's Autonomous Networks levels versus where most operators actually stand today."
+heading: "The road from scripts to autonomous networks"
+summary: "It's easy to hear \"agentic AI\" and assume it appeared out of nowhere. It didn't. Network automation has been climbing toward this for forty years, and it's worth seeing the whole climb before deciding how far along we actually are."
+date: 2026-07-08
+tags: ["core"]
+navCurrent: articles
+---
+{% extends "post.njk" %}
+
+{% block article %}
+<h2>A short history</h2>
+<ol class="traceroute">
+  <li data-hop="01">
+    <span class="era">1980s &ndash; 1990s</span>
+    <h3>Scripts and rules</h3>
+    <p>If/then automation, hand-written for highly repetitive tasks. Reliable, but rigid, and it only did exactly what it was told.</p>
+  </li>
+  <li data-hop="02">
+    <span class="era">2000s &ndash; 2010s</span>
+    <h3>Machine learning and AIOps</h3>
+    <p>Algorithms trained to spot anomalies and patterns across telemetry at a scale humans couldn't watch manually. Good at detection, still limited to alerting a human rather than acting.</p>
+  </li>
+  <li data-hop="03">
+    <span class="era">Early 2020s</span>
+    <h3>Generative AI copilots</h3>
+    <p>Natural language interfaces that could explain a problem fluently in a single exchange. Genuinely useful for understanding, but reactive and stateless, with no memory of the conversation and no ability to act on what it found.</p>
+  </li>
+  <li data-hop="04">
+    <span class="era">Mid-2020s onward</span>
+    <h3>Agentic AI</h3>
+    <p>Systems that reason across multiple steps, call tools, and coordinate with other agents or humans toward a goal, rather than answering one question at a time. This is what the rest of this site is mostly about.</p>
+  </li>
+</ol>
+
+<h2>TM Forum's Autonomous Networks levels</h2>
+<p>TM Forum, the telecom industry body behind a lot of the standards underneath OSS/BSS systems, publishes a six-level framework for how autonomous a network operation actually is. It's a useful yardstick precisely because it forces some precision onto a word that gets used pretty loosely in vendor marketing: "autonomous."</p>
+
+<div class="table-scroll">
+  <table class="data-table">
+    <thead>
+      <tr><th>Level</th><th>Name</th><th>What it means in practice</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>L0</td><td>Manual operations</td><td>Humans plan, design, and execute every change by hand. Tooling provides visibility, not automation.</td></tr>
+      <tr><td>L1</td><td>Assisted operations</td><td>Static, rule-based tooling assists a human who still makes and executes every decision.</td></tr>
+      <tr><td>L2</td><td>Partial autonomy</td><td>Closed-loop automation within a single, well-defined domain (auto-scaling a virtual function, reacting to a threshold alert), but nothing that reasons across domains.</td></tr>
+      <tr><td>L3</td><td>Conditional autonomy</td><td>The system senses, analyzes, and decides on its own within a domain under defined conditions. Humans set policy and handle exceptions rather than every action.</td></tr>
+      <tr><td>L4</td><td>Highly autonomous</td><td>Agents interpret abstract business intent, break it into cross-domain actions, and execute and assure services closed-loop with little human involvement.</td></tr>
+      <tr><td>L5</td><td>Fully autonomous</td><td>End-to-end self-governance across both technical and business systems, optimizing for customer experience rather than just technical health.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="note">
+  <span class="note-label">Where things actually stand</span>
+  <p>For most of the industry's history, operators have sat around L2 to L3: solid domain-specific automation, coordinated by people. Agentic AI is what's pushing some operators past that plateau, and TM Forum and a handful of operators, including China Mobile, have reported early L4 milestones in specific domains. That's real progress, and it's also narrower than "the network runs itself" headlines tend to imply. A domain-specific L4 win is not the same as an L5 network, and most deployments described as "AI-driven" today are honestly still L2 or L3 by this framework, whatever the marketing copy says.</p>
+</div>
+
+<p>None of that is a knock on the framework or the effort. It's a useful way to ask a sharper question than "is this autonomous," which is: autonomous within what domain, under what conditions, and with how much of a human still in the loop.</p>
+{% endblock %}

@@ -1,0 +1,54 @@
+---
+title: "About — NetAgents"
+description: "What NetAgents is, how it's put together, how to contribute a correction or a new agent, and who's behind it."
+navCurrent: about
+---
+{% extends "base.njk" %}
+
+{% block railnote %}One person, checked sources, and an open inbox for corrections.{% endblock %}
+
+{% block content %}
+<section class="hero hero-split">
+  <div class="hero-inner">
+    <div>
+      <span class="eyebrow">About</span>
+      <h1>A one-person project, not a product</h1>
+      <p class="lede">I started NetAgents because this space moves fast, is worth understanding, and was hard to get a clear picture of from any single source. It's for network engineers, architects, security folks, and anyone else trying to separate what's actually shipping from what's a slide in a keynote.</p>
+    </div>
+    <div class="hero-graphic" aria-hidden="true">
+      <div class="hero-illustration">
+        <img src="/assets/images/about-illustration.png" alt="" width="1254" height="1254">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <h2 id="contribute">Contribute</h2>
+    <p>This directory and the articles that go with it are hand-checked by one person, which means they won't stay complete or correct on their own. If you know of an agent or project that belongs here, spot something wrong, or want to pitch a write-up of your own, there are a few ways in:</p>
+    <ul>
+      <li><a href="https://github.com/rachedblili/NetAgents/issues/new?template=correction.yml">Report a correction</a> &mdash; something in the directory or an article is wrong, stale, or missing context.</li>
+      <li><a href="https://github.com/rachedblili/NetAgents/issues/new?template=new-agent.yml">Suggest a new agent or project</a> &mdash; tell me what it is, who makes it, and where to verify it.</li>
+      <li><a href="https://github.com/rachedblili/NetAgents/issues/new?template=community-article-pitch.yml">Pitch a community article</a> &mdash; if you've got a write-up on agentic networking worth sharing, I'd rather it live here alongside everything else than get lost in a feed.</li>
+      <li>Prefer not to use GitHub? <a href="mailto:info@strikerit.com?subject=NetAgents">Email works just as well</a>.</li>
+    </ul>
+    <p>Corrections that land get credited on the <a href="/directory/">directory page</a> where they apply &mdash; being right beats being fast, and I'd rather show that this gets checked by more than one set of eyes.</p>
+
+    <h2>How this is put together</h2>
+    <p>I started the directory as an AI-assisted research pass through public material on agentic AI in networking: vendor documentation, GitHub repositories, IETF drafts, and industry coverage. I then checked every entry against a primary source before it went on the page &mdash; a vendor's own product page, an official GitHub repository, or the actual IETF datatracker entry &mdash; rather than relying on a secondhand summary. That checking is ongoing, not a one-time pass, because vendor claims change and open source projects move fast.</p>
+    <p>The status tags on the directory (shipping, actively developed, experimental, research prototype) are my own judgment calls, not something vendors submit themselves. They're a quick, honest signal about maturity, and I'll get some of them wrong. If you work on one of the projects listed and think a tag is off, that's exactly the kind of correction I want.</p>
+
+    <h2>What being listed here does and doesn't mean</h2>
+    <p>Being listed isn't an endorsement, and this isn't exhaustive &mdash; there are plenty of agents and projects I haven't found yet, or that hadn't launched when I last updated a page. Descriptions come from public materials, not hands-on testing, unless an entry says otherwise. No vendor pays for placement or wording, with one exception below.</p>
+
+    <h2 id="disclosure">Who's behind it, and the one disclosed conflict</h2>
+    <p>I'm Rached &mdash; an agentic platform architect at <a href="https://www.fabrix.ai" rel="noopener">Fabrix.ai</a> and, on the side, principal and founder of <a href="https://strikerit.com" rel="noopener">Striker Consulting</a>, with a background that includes real time spent building and running networks before agentic AI was a category. NetAgents is a personal project that grew out of that overlap, not a Fabrix.ai or Striker Consulting product.</p>
+    <p>That overlap is also this site's one real conflict of interest: Fabrix.ai has six entries in the directory's <a href="/directory/#specialized">specialized agent catalogs</a> section. I've tried to describe them in the same plain, factual tone as everything else here, and nobody at Fabrix.ai reviews or approves this site. But weigh those entries knowing I have a real financial and professional stake in the company, not just a research interest. Every other vendor and project here, I have no financial relationship with.</p>
+    <ul class="contact-methods">
+      <li>GitHub: <a href="https://github.com/rachedblili" rel="noopener">github.com/rachedblili</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/rachedblili/" rel="noopener">linkedin.com/in/rachedblili</a></li>
+    </ul>
+  </div>
+</section>
+{% endblock %}
