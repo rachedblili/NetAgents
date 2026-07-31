@@ -5,3 +5,7 @@ _site/
 # Real-server deploy config (paths, usernames) -- local reference only,
 # never committed to this public repo.
 deploy/
+
+# Session context for AI assistants -- untracked on purpose, since it
+# references the real server path/username, same reasoning as deploy/.
+CLAUDE.md
