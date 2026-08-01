@@ -1,5 +1,5 @@
 ---
-title: "Agent directory — NetAgents"
+title: "Agent directory | NetAgents"
 description: "A grouped, filterable directory of AI agents and platforms in computer networking: full-stack vendor assistants, observability overlays, security agents, specialized agent catalogs, and open source or research projects."
 navCurrent: directory
 wideFooter: true
@@ -23,7 +23,7 @@ wideFooter: true
     <div class="note">
       <span class="note-label">Recently corrected</span>
       {% for change in changelog | reverse %}
-      <p>{{ change.date | shortDate }} &mdash; {{ change.note }}{% if change.entryId %} (<a href="#{{ change.entryId }}">{{ change.entryId }}</a>){% endif %}{% if change.creditedTo %}, thanks to {{ change.creditedTo }}{% endif %}.</p>
+      <p>{{ change.date | shortDate }}: {{ change.note }}{% if change.entryId %} (<a href="#{{ change.entryId }}">{{ change.entryId }}</a>){% endif %}{% if change.creditedTo %}, thanks to {{ change.creditedTo }}{% endif %}.</p>
       {% endfor %}
     </div>
     {% endif %}
@@ -54,7 +54,7 @@ wideFooter: true
   </div>
   <div class="note">
     <span class="note-label">Disclosure</span>
-    <p>I work at Fabrix.ai, so the six entries below aren't arm's length &mdash; see the <a href="/about/#disclosure">full disclosure</a>.</p>
+    <p>I work at Fabrix.ai, so the six entries below aren't arm's length. See the <a href="/about/#disclosure">full disclosure</a>.</p>
   </div>
   {% endif %}
   <div class="entry-grid">
@@ -84,7 +84,7 @@ wideFooter: true
 <section class="section-alt">
   <div class="wrap prose">
     <h2>Missing something?</h2>
-    <p>I maintain this directory by hand, so it won't stay complete on its own. If you know of an agent, project, or draft that belongs here, or something above is wrong or out of date, <a href="https://github.com/rachedblili/NetAgents/issues/new/choose">open an issue</a> &mdash; it lands as a public, trackable report instead of disappearing into an inbox, and corrections that land get credited above. Prefer not to use GitHub? <a href="mailto:info@strikerit.com?subject=NetAgents%20directory">email works just as well</a>. Being listed isn't an endorsement, and descriptions are summarized from public materials rather than hands-on testing unless noted.</p>
+    <p>I maintain this directory by hand, so it won't stay complete on its own. If you know of an agent, project, or draft that belongs here, or something above is wrong or out of date, <a href="https://github.com/rachedblili/NetAgents/issues/new/choose">open an issue</a>: it lands as a public, trackable report instead of disappearing into an inbox, and corrections that land get credited above. Prefer not to use GitHub? <a href="mailto:info@strikerit.com?subject=NetAgents%20directory">email works just as well</a>. Being listed isn't an endorsement, and descriptions are summarized from public materials rather than hands-on testing unless noted.</p>
   </div>
 </section>
 {% endblock %}
