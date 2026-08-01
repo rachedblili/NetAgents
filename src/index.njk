@@ -1,6 +1,6 @@
 ---
 title: "NetAgents — a field guide to agentic AI in networking"
-description: "A working directory and plain-language guide to AI agents in computer networking: what vendors and open source projects are actually shipping, the protocols connecting them, and the security questions nobody has fully answered yet."
+description: "A working directory and plain-language guide to AI agents in computer networking: what vendors and open source projects are shipping, the protocols connecting them, and the security questions nobody has fully answered yet."
 navCurrent: home
 wideFooter: true
 ---
@@ -14,7 +14,7 @@ wideFooter: true
     <div>
       <span class="eyebrow">NetAgents</span>
       <h1>A field guide to agentic AI in networking</h1>
-      <p class="lede">Every major networking vendor now ships something called an AI agent. Some of them reason step by step, call tools, and take real action on your infrastructure. Others are a chatbot wearing a new name tag. This site tries to tell the difference, and to keep a running account of the open source projects, protocols, and standards work happening underneath the announcements.</p>
+      <p class="lede">Every major networking vendor now ships something called an AI agent. Some of them reason step by step, call tools, and take action on your infrastructure. Others are a chatbot wearing a new name tag. This site tries to tell the difference, and to keep a running account of the open source projects, protocols, and standards work happening underneath the announcements.</p>
       <p><a class="btn" href="/directory/">Browse the directory</a> <a class="btn btn-outline" href="/about/">How this site works</a></p>
     </div>
     <div class="hero-graphic" aria-hidden="true">
@@ -48,16 +48,16 @@ wideFooter: true
 <section>
   <div class="wrap prose">
     <h2>What actually changed</h2>
-    <p>Network automation has gone through a few real shifts: scripted if/then automation in the 80s and 90s, machine-learning-driven anomaly detection through the 2010s, and generative AI chat interfaces earlier this decade that could explain a problem but not touch it. What's new now is agents that close the loop: they can look at telemetry, form a hypothesis, call a tool to check it, and in some cases make a change, all without a human clicking through each step.</p>
-    <p>That's useful for the boring, high-volume parts of network operations: chasing down why an access point went offline, correlating an alert across five dashboards, checking whether a proposed ACL change breaks something three hops away. It's also a real change in who, or what, has write access to your network, which is why this site spends as much time on the security and governance side as it does on the products themselves.</p>
-    <p><a href="/articles/road-to-autonomy/">Read the fuller history and where the industry actually stands on autonomy →</a></p>
+    <p>Network automation has gone through a few genuine shifts: scripted if/then automation in the 80s and 90s, machine-learning-driven anomaly detection through the 2010s, and generative AI chat interfaces earlier this decade that could explain a problem but not touch it. What's new now is agents that close the loop: they can look at telemetry, form a hypothesis, call a tool to check it, and in some cases make a change, all without a human clicking through each step.</p>
+    <p>That's useful for the boring, high-volume parts of network operations: chasing down why an access point went offline, correlating an alert across five dashboards, checking whether a proposed ACL change breaks something three hops away. It's also a change in who, or what, has write access to your network, which is why this site spends as much time on the security and governance side as it does on the products themselves.</p>
+    <p><a href="/articles/road-to-autonomy/">Read the fuller history and where the industry stands on autonomy →</a></p>
   </div>
 </section>
 
 <section class="section-alt">
   <div class="wrap wrap-wide">
     <h2>Explore the directory</h2>
-    <p class="lede" style="max-width: 60ch;">Agents and platforms, grouped by what they actually are rather than how they're marketed.</p>
+    <p class="lede" style="max-width: 60ch;">Agents and platforms, grouped by what they are rather than how they're marketed.</p>
     <div class="card-grid">
       <div class="card">
         <h3>Full-stack vendor platforms</h3>
@@ -85,7 +85,7 @@ wideFooter: true
 
 <section>
   <div class="wrap wrap-wide">
-    <h2>Three things worth understanding</h2>
+    <h2>Three things to understand first</h2>
     <div class="card-grid">
       <div class="card">
         <h3>The protocol underneath it</h3>
@@ -94,7 +94,7 @@ wideFooter: true
       </div>
       <div class="card">
         <h3>The security model</h3>
-        <p>Giving a language model tool access to production infrastructure opens a new kind of attack surface, worth understanding before you deploy one.</p>
+        <p>Giving a language model tool access to production infrastructure opens a new kind of attack surface. Understand it before you deploy one.</p>
         <a class="card-link" href="/articles/security-and-risk/">Read about the risks →</a>
       </div>
       <div class="card">

@@ -27,6 +27,6 @@
     "id": "opensource",
     "icon": "icon-opensource.png",
     "title": "Open source, community & research",
-    "description": "The open source layer is where a lot of the real experimentation is happening, from official vendor tooling to weekend projects to academic papers on how agents should route work to each other."
+    "description": "The open source layer is where a lot of the experimentation is happening, from official vendor tooling to weekend projects to academic papers on how agents should route work to each other."
   }
 ]

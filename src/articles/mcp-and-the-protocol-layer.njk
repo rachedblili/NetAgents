@@ -1,8 +1,8 @@
 ---
 title: "MCP and the protocol layer — NetAgents"
-description: "What the Model Context Protocol actually does, why it matters for networking specifically, and where the early IETF drafts and community federation experiments stand."
+description: "What the Model Context Protocol does, why it matters for networking specifically, and where the early IETF drafts and community federation experiments stand."
 heading: "Why MCP matters for networking"
-summary: "Almost everything in the directory that isn't a closed vendor platform is wired together the same way: the Model Context Protocol, worth understanding on its own terms, separate from any specific product."
+summary: "Almost everything in the directory that isn't a closed vendor platform is wired together the same way: the Model Context Protocol, which deserves to be understood on its own terms, separate from any specific product."
 date: 2026-07-30
 tags: ["core"]
 navCurrent: articles
@@ -10,9 +10,9 @@ navCurrent: articles
 {% extends "post.njk" %}
 
 {% block article %}
-<h2>What MCP actually is</h2>
-<p>The Model Context Protocol, released by Anthropic as an open standard, is a JSON-RPC 2.0 specification for connecting a language model to external tools, data, and prompts in a consistent way. That's a dry sentence for something that solved a real, annoying problem: before MCP, every integration between an AI application and an external system was custom-built. If you wanted Claude to check a routing table, someone had to write bespoke code for that specific model, that specific vendor's API, and that specific version of both.</p>
-<p>MCP standardizes the shape of that connection instead. A device or platform can expose a set of "tools" (things an agent can call, like <code>show_command</code> or <code>get_route_table</code>), "resources" (data an agent can read), and "prompts" (pre-built templates for common tasks). Any MCP-compatible client, whether that's Claude Desktop, an IDE, or a custom orchestration platform, can discover and use them without vendor-specific glue code. That's the whole idea, and it's a big part of why the open source directory of MCP servers has grown as fast as it has.</p>
+<h2>What MCP is</h2>
+<p>The Model Context Protocol, released by Anthropic as an open standard, is a JSON-RPC 2.0 specification for connecting a language model to external tools, data, and prompts in a consistent way. That's a dry sentence for something that solved an annoying problem: before MCP, every integration between an AI application and an external system was custom-built. If you wanted Claude to check a routing table, someone had to write bespoke code for that specific model, that specific vendor's API, and that specific version of both.</p>
+<p>MCP standardizes the shape of that connection instead. A device or platform can expose a set of "tools" (things an agent can call, like <code>show_command</code> or <code>get_route_table</code>), "resources" (data an agent can read), and "prompts" (pre-built templates for common tasks). Any MCP-compatible client, whether that's Claude Desktop, an IDE, or a custom orchestration platform, can discover and use them without vendor-specific glue code &mdash; a big part of why the open source directory of MCP servers has grown as fast as it has.</p>
 
 <h2>Why this matters more in networking than most domains</h2>
 <p>A language model has no innate awareness of your specific network. It knows general facts about BGP and general patterns in Junos syntax, but it has no idea what your topology looks like, what changed last Tuesday, or whether that firewall rule is actually in production. MCP is the piece that closes that gap: a server that exposes live, verified state (routing tables, interface counters, configuration) to a model that would otherwise be reasoning from training data alone.</p>
@@ -27,7 +27,7 @@ navCurrent: articles
 </div>
 
 <h2>Community federation experiments</h2>
-<p>Standards bodies aren't the only place this is being worked out. The open source project <a href="/directory/#opensource">NetClaw</a> takes a different approach to the same underlying problem: how do you avoid building one model that has to understand every vendor's syntax, every protocol, and every tool at once? Its answer is federation: a central agent routes a request to smaller, specialized agents, each scoped to one vendor or domain. It documents its own wire protocol for this, NCFED, as an individual IETF draft rather than an adopted standard, which is worth keeping in mind if you're evaluating it for anything beyond a lab.</p>
+<p>Standards bodies aren't the only place this is being worked out. The open source project <a href="/directory/#opensource">NetClaw</a> takes a different approach to the same underlying problem: how do you avoid building one model that has to understand every vendor's syntax, every protocol, and every tool at once? Its answer is federation: a central agent routes a request to smaller, specialized agents, each scoped to one vendor or domain. It documents its own wire protocol for this, NCFED, as an individual IETF draft rather than an adopted standard, so don't evaluate it for anything beyond a lab yet.</p>
 <p>Whether that specific project succeeds or not, the underlying idea shows up repeatedly across this space: specialized agents with narrow tool access, coordinated by something else, instead of one model with hundreds of tools bolted on. It's also closely related to the tool-routing problem <a href="/directory/#opensource">ACE-Router</a> is studying academically.</p>
 
 <h2>A short glossary</h2>
