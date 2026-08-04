@@ -70,7 +70,7 @@ wideFooter: true
           <span class="pill">{{ agent.tags }}</span>
           <span class="entry-verified">verified {{ agent.dateVerified | shortDate }}</span>
         </span>
-        <a class="entry-link" href="{{ agent.url }}" rel="noopener">visit →</a>
+        <a class="entry-link" href="{{ agent.url }}" target="_blank" rel="noopener">visit →</a>
       </div>
     </article>
     {% endif %}
@@ -84,7 +84,7 @@ wideFooter: true
 <section class="section-alt">
   <div class="wrap prose">
     <h2>Missing something?</h2>
-    <p>I maintain this directory by hand, so it won't stay complete on its own. If you know of an agent, project, or draft that belongs here, or something above is wrong or out of date, <a href="https://github.com/rachedblili/NetAgents/issues/new/choose">open an issue</a>: it lands as a public, trackable report instead of disappearing into an inbox, and corrections that land get credited above. Prefer not to use GitHub? <a href="mailto:info@strikerit.com?subject=NetAgents%20directory">email works just as well</a>. Being listed isn't an endorsement, and descriptions are summarized from public materials rather than hands-on testing unless noted.</p>
+    <p>I maintain this directory by hand, so it won't stay complete on its own. If you know of an agent, project, or draft that belongs here, or something above is wrong or out of date, <a href="https://github.com/rachedblili/NetAgents/issues/new/choose" target="_blank" rel="noopener">open an issue</a>: it lands as a public, trackable report instead of disappearing into an inbox, and corrections that land get credited above. Prefer not to use GitHub? <a href="mailto:info@strikerit.com?subject=NetAgents%20directory">email works just as well</a>. Being listed isn't an endorsement, and descriptions are summarized from public materials rather than hands-on testing unless noted.</p>
   </div>
 </section>
 {% endblock %}
