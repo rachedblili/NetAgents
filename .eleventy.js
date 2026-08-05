@@ -21,6 +21,10 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  eleventyConfig.addFilter("latestVerified", (items) =>
+    items.reduce((max, i) => (i.dateVerified > max ? i.dateVerified : max), items[0].dateVerified)
+  );
+
   eleventyConfig.addCollection("articles", (collectionApi) => {
     return collectionApi.getFilteredByGlob("src/articles/*.njk").sort((a, b) => b.date - a.date);
   });

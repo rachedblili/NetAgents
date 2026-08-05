@@ -1,0 +1,12 @@
+{
+  "category": "orchestration",
+  "name": "OPNsense MCP",
+  "maker": "vespo92 (community)",
+  "statusClass": "active",
+  "statusLabel": "actively developed",
+  "description": "One of several OPNsense MCP servers, chosen here for how seriously it treats the risk of an agent misconfiguring a firewall: read-only by default, and write operations use OPNsense's savepoint mechanism, a 60-second countdown that auto-reverts the change unless explicitly confirmed. Also supports declarative plan/apply workflows for VLANs, firewall rules, DHCP, DNS blocking, and HAProxy.",
+  "tags": "MCP · orchestration",
+  "url": "https://github.com/vespo92/OPNSenseMCP",
+  "search": "opnsense mcp server vespo92 firewall savepoint rollback read-only iac plan apply",
+  "dateVerified": "2026-08-05"
+}

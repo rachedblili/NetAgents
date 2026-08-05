@@ -8,6 +8,7 @@ This is a one-person, hand-checked project — see the [About page](https://neta
 | --- | --- |
 | Flag something wrong, stale, or missing context | [Report a correction](https://github.com/rachedblili/NetAgents/issues/new?template=correction.yml) |
 | Suggest an agent or project for the directory | [Suggest a new agent](https://github.com/rachedblili/NetAgents/issues/new?template=new-agent.yml) |
+| Add a new ecosystem entry (source-of-truth, observability, standards, etc.) | [Suggest a new ecosystem entry](https://github.com/rachedblili/NetAgents/issues/new?template=new-ecosystem-entry.yml), or send a PR directly, see below |
 | Pitch a write-up of my own | [Pitch a community article](https://github.com/rachedblili/NetAgents/issues/new?template=community-article-pitch.yml) |
 | Ask an open-ended question, or just talk | [GitHub Discussions](https://github.com/rachedblili/NetAgents/discussions) |
 | Comment on a specific article | The comment thread at the bottom of the article itself (giscus, backed by this repo's Discussions) |
@@ -25,4 +26,6 @@ I check it, and if it lands, it gets credited in the directory's "recently corre
 
 ## Pull requests
 
-Not currently the expected path — directory entries and articles are structured enough (JSON data, front-matter-tagged templates) that an issue describing the change is usually easier for both of us than a diff. If you've written a full community article draft, the article-pitch template is the right first step before a PR.
+For the agent directory and articles, not currently the expected path. Those are structured enough (a shared JSON array, front-matter-tagged templates) that an issue describing the change is usually easier for both of us than a diff, and a shared array means two concurrent PRs can collide on the same file. If you've written a full community article draft, the article-pitch template is the right first step before a PR.
+
+**Ecosystem entries are the exception.** Each one lives in its own file at `src/_data/ecosystem/<category>/<entry-slug>.json`, so a new entry is a single-file addition with no collision risk. If you'd rather open a PR than an issue for one of these, go ahead. Match the shape of an existing file in the same category directory: `category`, `name`, `maker`, `statusClass` (`shipping`, `active`, `experimental`, or `draft`), `statusLabel`, `description` (roughly 350 to 480 visible characters, inline links allowed), `tags`, `url`, `search`, and `dateVerified`. Link to a primary source (the project's own repo or docs) rather than a vendor's marketing page where the two differ.

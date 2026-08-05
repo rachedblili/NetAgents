@@ -1,0 +1,12 @@
+{
+  "category": "lab-tooling",
+  "name": "NetworkOps_Platform",
+  "maker": "E-Conners-Lab (community)",
+  "statusClass": "experimental",
+  "statusLabel": "community project",
+  "description": "A community project pairing NetBox with a large set of MCP tools spanning Cisco, Juniper, Nokia, Arista, and Linux devices, plus self-healing agents and drift detection against an intended state. A good snapshot of how far a single motivated maintainer can push multi-vendor agent tooling.",
+  "tags": "multi-vendor · NetBox",
+  "url": "https://github.com/E-Conners-Lab/NetworkOps_Platform",
+  "search": "networkops_platform e-conners-lab netbox multi-vendor cisco juniper nokia arista linux self-healing drift detection",
+  "dateVerified": "2026-07-31"
+}

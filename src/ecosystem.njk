@@ -1,0 +1,81 @@
+---
+title: "Ecosystem | NetAgents"
+description: "The components that make agentic networking work beyond the agents themselves: source-of-truth platforms, observability, orchestration, digital twins, AI security, standards, lab tooling, and community resources."
+navCurrent: ecosystem
+wideFooter: true
+---
+{% extends "base.njk" %}
+
+{% block railnote %}{{ ecosystem.length }} entries, most recently checked {{ ecosystem | latestVerified | shortDate }}. See <a href="/about/">methodology</a>.{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="wrap wrap-wide">
+    <span class="eyebrow">Ecosystem</span>
+    <h1>The parts around the agents</h1>
+    <p class="lede" style="max-width: 62ch;">An agent is only as good as what it's plugged into. This is the rest of the stack: the source-of-truth platforms agents read from, the observability and orchestration layers they act through, the standards they're being built on, and the security thinking specific to giving them real access. Same hand-checked bar as the <a href="/directory/">agent directory</a>, same honest status tags.</p>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="wrap wrap-wide">
+    <div class="filter-bar">
+      <button class="filter-chip is-active" data-filter="all" type="button">All</button>
+      {% for cat in ecosystemCategories %}
+      <button class="filter-chip" data-filter="{{ cat.id }}" type="button">{{ cat.title }}</button>
+      {% endfor %}
+      <input type="search" id="ecosystem-search" placeholder="Search by name, maker, or keyword" aria-label="Search the ecosystem">
+    </div>
+    <p class="filter-count" id="filter-count"></p>
+  </div>
+</section>
+
+<article class="wrap wrap-wide">
+
+{% for cat in ecosystemCategories %}
+<section class="entry-group" id="{{ cat.id }}">
+  <div class="entry-group-head">
+    <h2><img class="category-icon" src="/assets/images/{{ cat.icon }}" alt="" width="28" height="28">{{ cat.title }}</h2>
+    <p>{{ cat.description }}</p>
+  </div>
+  {% if cat.id == "agent-platforms" %}
+  <div class="note">
+    <span class="note-label">Disclosure</span>
+    <p>I work at Fabrix.ai. Entries about Fabrix.ai products in this category aren't arm's length. See the <a href="/about/#disclosure">full disclosure</a>.</p>
+  </div>
+  {% endif %}
+  <div class="entry-grid">
+    {% for item in ecosystem %}
+    {% if item.category == cat.id %}
+    <article class="entry" data-category="{{ item.category }}" data-search="{{ item.search }}">
+      <div class="entry-top"><span class="entry-id">{{ item.id }}</span><span class="pill status-{{ item.statusClass }}">{{ item.statusLabel }}</span></div>
+      <h3>{{ item.name }}</h3>
+      <p class="maker">{{ item.maker }}</p>
+      <p class="desc">{{ item.description | safe }}</p>
+      <div class="entry-foot">
+        <span class="entry-meta">
+          <span class="pill">{{ item.tags }}</span>
+          <span class="entry-verified">verified {{ item.dateVerified | shortDate }}</span>
+        </span>
+        <a class="entry-link" href="{{ item.url }}" target="_blank" rel="noopener">visit →</a>
+      </div>
+    </article>
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}
+
+</article>
+
+<section class="section-alt">
+  <div class="wrap prose">
+    <h2>Missing something?</h2>
+    <p>This section is newer and less complete than the agent directory, so gaps are expected. If you know of a source-of-truth platform, MCP server, standard, or lab tool that belongs here, <a href="https://github.com/rachedblili/NetAgents/issues/new/choose" target="_blank" rel="noopener">open an issue</a> or, for a new entry, send a PR directly (see <a href="https://github.com/rachedblili/NetAgents/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">CONTRIBUTING.md</a>). Prefer not to use GitHub? <a href="mailto:info@strikerit.com?subject=NetAgents%20ecosystem">email works just as well</a>. Being listed isn't an endorsement, and descriptions are summarized from public materials rather than hands-on testing unless noted.</p>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="/assets/js/ecosystem.js"></script>
+{% endblock %}

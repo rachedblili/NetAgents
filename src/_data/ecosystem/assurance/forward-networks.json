@@ -1,0 +1,12 @@
+{
+  "category": "assurance",
+  "name": "Forward Networks",
+  "maker": "Forward Networks",
+  "statusClass": "shipping",
+  "statusLabel": "shipping",
+  "description": "Similar territory to IP Fabric: a digital twin used to verify proposed changes deterministically before they touch production. It's included for a different reason than most of what's covered on this page: a reminder that \"verify before you act\" doesn't always need an LLM in the loop, just good math and a reliable model of the network.",
+  "tags": "digital twin · verification",
+  "url": "https://www.forwardnetworks.com/",
+  "search": "forward networks forward ai digital twin change validation deterministic verification",
+  "dateVerified": "2026-07-31"
+}

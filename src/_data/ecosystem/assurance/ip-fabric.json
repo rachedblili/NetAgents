@@ -1,0 +1,12 @@
+{
+  "category": "assurance",
+  "name": "IP Fabric",
+  "maker": "IP Fabric",
+  "statusClass": "shipping",
+  "statusLabel": "shipping",
+  "description": "Discovers a network read-only over SSH and APIs and builds a mathematically accurate digital twin of its actual, current state. The agent-facing piece is an Enterprise MCP Server that lets tools like Claude or Copilot query that twin directly (end-to-end path lookups, shadow firewall rules, missing segmentation) instead of guessing from general networking knowledge.",
+  "tags": "digital twin · assurance",
+  "url": "https://ipfabric.io/",
+  "search": "ip fabric network assurance digital twin mcp server shadow rules enterprise mcp",
+  "dateVerified": "2026-07-31"
+}

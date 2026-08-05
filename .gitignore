@@ -10,6 +10,7 @@ deploy/
 # references the real server path/username, same reasoning as deploy/.
 CLAUDE.md
 
-# Raw AI-assisted research dump used to build the directory -- local
-# reference only, not cleaned up for public consumption.
-RESEARCH.md
+# Raw AI-assisted research dumps, planning docs, and other working files
+# used to build/extend the directory -- local reference only, not cleaned
+# up for public consumption.
+research/

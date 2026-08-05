@@ -1,0 +1,56 @@
+[
+  {
+    "id": "agent-platforms",
+    "icon": "icon-harness.png",
+    "title": "Agent Platforms & Harnesses",
+    "description": "The layer other agents on this site are often built on: platforms for building, orchestrating, and running multiple AI agents together, rather than a single-purpose product of their own."
+  },
+  {
+    "id": "source-of-truth",
+    "icon": "icon-truth.png",
+    "title": "Source of Truth",
+    "description": "Agents need a reliable, structured record of what the network is supposed to look like before they can safely act on it. These are the inventory and intent-modeling platforms that play that role, plus the MCP servers that expose them to agents."
+  },
+  {
+    "id": "observability",
+    "icon": "icon-observability.png",
+    "title": "Observability & Telemetry",
+    "description": "Monitoring and metrics platforms, and the MCP servers or protocol bridges that let an agent query them directly instead of working from a stale dashboard export."
+  },
+  {
+    "id": "orchestration",
+    "icon": "icon-execution.png",
+    "title": "Orchestration & Execution",
+    "description": "The layer where an agent's decision actually turns into a change on a device: task orchestration platforms and the MCP bridges that carry real write and execute capability, not just read access."
+  },
+  {
+    "id": "assurance",
+    "icon": "icon-twin.png",
+    "title": "Network Assurance & Digital Twins",
+    "description": "Platforms that model network behavior end to end, so a proposed change can be verified against a simulated or mathematically modeled version of the network before it touches production."
+  },
+  {
+    "id": "security",
+    "icon": "icon-ai_security.png",
+    "title": "AI Security",
+    "description": "The threat models, hardening patterns, and access-control tooling specific to giving an agent real access to network infrastructure, distinct from traditional network security."
+  },
+  {
+    "id": "standards",
+    "icon": "icon-standards.png",
+    "title": "Standards & Protocols",
+    "description": "The protocols and frameworks agentic networking is being built on, from the Model Context Protocol itself to early-stage IETF drafts and industry autonomy frameworks. Where something is a draft rather than an adopted standard, that's called out rather than implied."
+  },
+  {
+    "id": "lab-tooling",
+    "icon": "icon-lab.png",
+    "title": "Lab & Test Tooling",
+    "description": "Sandboxes and lab environments built for trying an agent against network gear without risking anything real."
+  },
+  {
+    "id": "community",
+    "icon": "icon-community.png",
+    "title": "Community & Further Reading",
+    "description": "Looser than the other categories by design: foundational reading for agent builders alongside the communities and venues where agentic networking is actively discussed."
+  }
+]

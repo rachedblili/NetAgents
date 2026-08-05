@@ -1,0 +1,12 @@
+{
+  "category": "standards",
+  "name": "Model Context Protocol",
+  "maker": "Agentic AI Foundation (Linux Foundation)",
+  "statusClass": "shipping",
+  "statusLabel": "de facto industry standard",
+  "description": "The open protocol underneath almost everything else on this page: a standardized way for LLM applications to connect to external tools and data over JSON-RPC. Originated at Anthropic in November 2024; as of December 2025, Anthropic donated it to the Agentic AI Foundation, a new Linux Foundation directed fund co-founded with Block and OpenAI and backed by Google, Microsoft, AWS, Cloudflare, and Bloomberg, so no single vendor now controls the spec.",
+  "tags": "standards · protocol",
+  "url": "https://modelcontextprotocol.io/",
+  "search": "model context protocol mcp anthropic agentic ai foundation linux foundation json-rpc specification governance donation",
+  "dateVerified": "2026-08-05"
+}

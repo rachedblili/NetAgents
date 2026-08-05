@@ -1,0 +1,12 @@
+{
+  "category": "standards",
+  "name": "Network Management Agent (NMA)",
+  "maker": "IETF (individual draft)",
+  "statusClass": "draft",
+  "statusLabel": "individual IETF draft",
+  "description": "A second, more institutionally backed IETF draft alongside NCFED: co-authored across CAICT, China Mobile, Huawei, Cisco, and ZTE, now on its fifth revision. Proposes a Network Management Agent that works alongside existing controllers rather than replacing them, aimed explicitly at reaching TM Forum's Level 4 autonomy, with four defined interface types for agent-to-user, agent-to-agent, agent-to-controller, and agent-to-network communication.",
+  "tags": "standards · IETF draft",
+  "url": "https://datatracker.ietf.org/doc/draft-zhao-nmop-network-management-agent/",
+  "search": "network management agent nma ietf draft zhao nmop caict china mobile huawei cisco zte level 4 autonomy",
+  "dateVerified": "2026-08-05"
+}

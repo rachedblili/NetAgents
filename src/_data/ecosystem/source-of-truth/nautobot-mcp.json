@@ -1,0 +1,12 @@
+{
+  "category": "source-of-truth",
+  "name": "Nautobot MCP",
+  "maker": "kvncampos (community)",
+  "statusClass": "active",
+  "statusLabel": "actively developed",
+  "description": "A community-built MCP server for Nautobot, the other major open source network source-of-truth platform, with both STDIO and HTTP deployment modes plus embedding search and RAG over Nautobot's data model. Unlike NetBox's official MCP server, this isn't built or endorsed by Nautobot's maintainer, Network to Code; treat it as a promising independent project rather than an official integration.",
+  "tags": "MCP · source of truth",
+  "url": "https://github.com/kvncampos/nautobot_mcp",
+  "search": "nautobot mcp server kvncampos community stdio http rag embedding search network to code",
+  "dateVerified": "2026-08-05"
+}

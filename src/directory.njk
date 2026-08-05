@@ -6,7 +6,7 @@ wideFooter: true
 ---
 {% extends "base.njk" %}
 
-{% block railnote %}{{ agents.length }} entries, hand-checked against primary sources. See <a href="/about/">methodology</a>.{% endblock %}
+{% block railnote %}{{ agents.length }} entries, most recently checked {{ agents | latestVerified | shortDate }}. See <a href="/about/">methodology</a>.{% endblock %}
 
 {% block content %}
 <section class="hero">
@@ -64,7 +64,7 @@ wideFooter: true
       <div class="entry-top"><span class="entry-id">{{ agent.id }}</span><span class="pill status-{{ agent.statusClass }}">{{ agent.statusLabel }}</span></div>
       <h3>{{ agent.name }}</h3>
       <p class="maker">{{ agent.maker }}</p>
-      <p class="desc">{{ agent.description }}</p>
+      <p class="desc">{{ agent.description | safe }}</p>
       <div class="entry-foot">
         <span class="entry-meta">
           <span class="pill">{{ agent.tags }}</span>

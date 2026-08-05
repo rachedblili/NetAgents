@@ -1,0 +1,12 @@
+{
+  "category": "orchestration",
+  "name": "Junos MCP Server",
+  "maker": "Juniper Networks (official)",
+  "statusClass": "active",
+  "statusLabel": "actively developed",
+  "description": "Juniper's own bridge between MCP clients like Claude Desktop or Copilot and real Junos devices, built on the junos-eznc SDK. Tools range from read-only (device facts, show commands) to a seriously privileged one: apply_config, which pushes configuration changes directly. Worth reading the permissions model closely before pointing it at anything you care about.",
+  "tags": "MCP · NETCONF",
+  "url": "https://github.com/Juniper/junos-mcp-server",
+  "search": "junos mcp server juniper official github netconf pyez apply_config get_fact show_command claude desktop copilot",
+  "dateVerified": "2026-07-31"
+}

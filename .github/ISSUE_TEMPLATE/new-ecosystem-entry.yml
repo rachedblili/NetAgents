@@ -1,0 +1,50 @@
+name: Suggest a new ecosystem entry
+description: Tell me about a source-of-truth platform, MCP server, standard, or other ecosystem component that belongs on the Ecosystem page.
+title: "[New ecosystem entry] "
+labels: ["new-entry", "ecosystem"]
+body:
+  - type: markdown
+    attributes:
+      value: Prefer a PR? Each ecosystem entry is its own file at `src/_data/ecosystem/<category>/<entry-slug>.json`, see CONTRIBUTING.md for the schema. This form works just as well if you'd rather not.
+  - type: input
+    id: name
+    attributes:
+      label: Name
+    validations:
+      required: true
+  - type: input
+    id: maker
+    attributes:
+      label: Maker / maintainer
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Which category does it fit?
+      options:
+        - Source of Truth
+        - Observability & Telemetry
+        - Orchestration & Execution
+        - Network Assurance & Digital Twins
+        - AI Security
+        - Standards & Protocols
+        - Lab & Test Tooling
+        - Community & Further Reading
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Primary source
+      description: A link I can verify it against (project's own repo or docs, not a vendor marketing page).
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: What does it actually do, and why does it belong here?
+      description: Plain-language description of its capabilities, not marketing copy. If it's a draft/proposal rather than a shipping thing, say so.
+    validations:
+      required: true

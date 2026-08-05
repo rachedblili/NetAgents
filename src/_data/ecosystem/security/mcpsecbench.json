@@ -1,0 +1,12 @@
+{
+  "category": "security",
+  "name": "MCPSecBench",
+  "maker": "Academic research (arXiv)",
+  "statusClass": "draft",
+  "statusLabel": "research",
+  "description": "A systematic security benchmark and testing playground for MCP, built around a taxonomy of 17 distinct attack types across four attack surfaces, evaluated against three major MCP hosts: Claude Desktop, OpenAI, and Cursor. Useful less as a product to adopt than as a concrete checklist of what \"MCP security\" actually needs to cover.",
+  "tags": "research · security",
+  "url": "https://arxiv.org/abs/2508.13220",
+  "search": "mcpsecbench security benchmark playground taxonomy attack surface prompt injection tool poisoning arxiv",
+  "dateVerified": "2026-08-05"
+}

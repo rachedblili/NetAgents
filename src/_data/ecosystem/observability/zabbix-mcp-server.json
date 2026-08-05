@@ -1,0 +1,12 @@
+{
+  "category": "observability",
+  "name": "Zabbix MCP Server",
+  "maker": "initMAX (community)",
+  "statusClass": "active",
+  "statusLabel": "actively developed",
+  "description": "An MCP server covering essentially the entire Zabbix API (223 tools across 58 API groups) rather than a narrow read-only slice: hosts, problems, triggers, templates, dashboards, and more. Supports multiple Zabbix servers at once, OAuth 2.1 and bearer auth, a read-only mode with per-token write protection, and systemd deployment, more production-hardened than most single-maintainer MCP servers in this space.",
+  "tags": "MCP · observability",
+  "url": "https://github.com/initMAX/zabbix-mcp-server",
+  "search": "zabbix mcp server initmax monitoring api oauth read-only systemd",
+  "dateVerified": "2026-08-05"
+}

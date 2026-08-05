@@ -1,0 +1,12 @@
+{
+  "category": "agent-platforms",
+  "name": "Fabrix.ai AgenticAI Platform",
+  "maker": "Fabrix.ai",
+  "statusClass": "shipping",
+  "statusLabel": "shipping",
+  "description": "Fabrix.ai's answer to why agent demos stall in production: a Context Engine caches large tool outputs and conversation history outside the LLM's window, so tools pass data to each other through a shared cache rather than through the model. A graph-based Ontology Layer maps how entities correlate across sources to drive what gets cached. A Tooling and Connectivity Engine generates MCP-compatible interfaces for systems without native MCP support. AgentOps adds cost tracking, observability, and human-in-the-loop approval.",
+  "tags": "agent runtime · multi-agent",
+  "url": "https://www.fabrix.ai/agenticai/",
+  "search": "fabrix.ai agent runtime core context engine ontology layer tooling connectivity engine agentops tri-fabric mcp harness",
+  "dateVerified": "2026-08-05"
+}

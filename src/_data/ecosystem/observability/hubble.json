@@ -1,0 +1,12 @@
+{
+  "category": "observability",
+  "name": "Hubble",
+  "maker": "Cilium (CNCF)",
+  "statusClass": "shipping",
+  "statusLabel": "mature open source",
+  "description": "eBPF-based observability for cloud-native traffic. It isn't an AI agent, but it's increasingly the data source underneath higher-level agentic observability tools looking at Kubernetes networking.",
+  "tags": "eBPF · observability",
+  "url": "https://github.com/cilium/hubble",
+  "search": "hubble cilium ebpf observability kubernetes cloud native distributed tracing",
+  "dateVerified": "2026-07-31"
+}

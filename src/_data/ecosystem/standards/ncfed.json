@@ -1,0 +1,12 @@
+{
+  "category": "standards",
+  "name": "NCFED (NetClaw-to-NetClaw Federation)",
+  "maker": "IETF (individual draft)",
+  "statusClass": "draft",
+  "statusLabel": "individual IETF draft",
+  "description": "Lets independently operated AI network-engineering agents discover each other's capabilities and delegate tasks over authenticated sessions, including across frameworks (stated interop between <a href=\"https://github.com/openclaw/openclaw\" target=\"_blank\" rel=\"noopener\">OpenClaw</a>- and <a href=\"https://github.com/NousResearch/hermes-agent\" target=\"_blank\" rel=\"noopener\">Hermes</a>-based agents). Documented as an individual IETF Internet-Draft, not a reviewed or adopted standard, but more detailed than that status implies: concrete wire framing, TLS 1.3 security, TOFU trust bootstrapping, and explicit handling of cross-agent prompt injection.",
+  "tags": "standards · federation",
+  "url": "https://datatracker.ietf.org/doc/draft-capobianco-ncfed/",
+  "search": "ncfed netclaw-to-netclaw federation protocol ietf draft capobianco openclaw hermes mcp a2a bgp multiplexed tls trust on first use prompt injection",
+  "dateVerified": "2026-08-05"
+}

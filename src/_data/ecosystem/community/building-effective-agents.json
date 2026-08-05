@@ -1,0 +1,12 @@
+{
+  "category": "community",
+  "name": "Building Effective Agents",
+  "maker": "Anthropic",
+  "statusClass": "shipping",
+  "statusLabel": "reference reading",
+  "description": "Not networking-specific, but foundational: Anthropic's own field notes on when to use a fixed workflow versus a genuinely autonomous agent, and the handful of composable patterns (prompt chaining, routing, orchestrator-workers, evaluator-optimizer) that cover most real use cases better than one large autonomous loop. Good background before evaluating any agent framework, including the networking-specific ones elsewhere on this page.",
+  "tags": "reference · agent design",
+  "url": "https://www.anthropic.com/engineering/building-effective-agents",
+  "search": "building effective agents anthropic workflows patterns prompt chaining routing orchestrator workers evaluator optimizer",
+  "dateVerified": "2026-08-05"
+}

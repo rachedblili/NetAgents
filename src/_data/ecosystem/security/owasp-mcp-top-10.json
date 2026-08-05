@@ -1,0 +1,12 @@
+{
+  "category": "security",
+  "name": "OWASP MCP Top 10",
+  "maker": "OWASP Foundation",
+  "statusClass": "active",
+  "statusLabel": "beta, actively maintained",
+  "description": "The first OWASP Top 10 dedicated to a single protocol surface, covering risks specific to MCP-enabled systems: model misbinding, context spoofing, prompt-state manipulation, insecure memory references, and covert channel abuse. Currently in Phase 3 beta and pilot testing, meaning the ten categories are stable enough to cite even though specific rankings and descriptions may still shift before a 1.0 release.",
+  "tags": "security · standards",
+  "url": "https://owasp.org/www-project-mcp-top-10/",
+  "search": "owasp mcp top 10 security model context protocol beta vandana verma sehgal",
+  "dateVerified": "2026-08-05"
+}

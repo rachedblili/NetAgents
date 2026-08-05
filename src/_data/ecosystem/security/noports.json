@@ -1,0 +1,12 @@
+{
+  "category": "security",
+  "name": "NoPorts",
+  "maker": "Atsign Foundation",
+  "statusClass": "active",
+  "statusLabel": "actively developed",
+  "description": "Open source (BSD-3-Clause) remote-access tooling from the Atsign Foundation, carrying OpenSSF Best Practices and Scorecard badges plus SLSA 3 compliance, not just vendor claims. The <a href=\"https://github.com/atsign-foundation/noports-iosxe\" target=\"_blank\" rel=\"noopener\">noports-iosxe</a> integration runs as a Docker app-hosting container directly on Cisco Catalyst 9000/8000 switches, giving SSH, gNMI, NETCONF, and RESTCONF access with no inbound listening port on the management plane.",
+  "tags": "remote access · zero trust",
+  "url": "https://github.com/atsign-foundation/noports",
+  "search": "noports atsign foundation zero exposure remote access ssh gnmi netconf restconf cisco catalyst iosxe app hosting openssf slsa bsd",
+  "dateVerified": "2026-08-05"
+}

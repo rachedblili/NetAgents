@@ -1,0 +1,12 @@
+{
+  "category": "standards",
+  "name": "TM Forum Autonomous Networks Levels",
+  "maker": "TM Forum",
+  "statusClass": "shipping",
+  "statusLabel": "industry framework",
+  "description": "The six-level (L0 to L5) autonomy framework referenced throughout this space whenever something claims to be \"autonomous\": L0 is fully manual, L3 is conditional autonomy for specific scenarios, L5 is full autonomy with no human involvement. Formalized across IG1230 (technical architecture) and IG1252 (levels evaluation methodology). Useful as a shared vocabulary and a reality check: almost everything on this page sits at L2 or L3, not L5, no matter what the marketing says.",
+  "tags": "standards · framework",
+  "url": "https://www.tmforum.org/topics/an-resources/",
+  "search": "tm forum autonomous networks levels l0 l5 ig1230 ig1252 technical architecture evaluation methodology",
+  "dateVerified": "2026-08-05"
+}

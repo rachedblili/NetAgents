@@ -1,0 +1,12 @@
+{
+  "category": "observability",
+  "name": "Prometheus MCP Server",
+  "maker": "Prometheus (official org repo)",
+  "statusClass": "active",
+  "statusLabel": "actively developed",
+  "description": "Lives under the official Prometheus GitHub org and lets an agent run PromQL queries, discover metrics, and analyze performance data, including against compatible backends like Thanos and Mimir. Optional TSDB admin tools sit behind an explicit flag, with a blunt README warning: it's not the server's fault if the LLM it's connected to deletes your data. A community alternative, pab1it0/prometheus-mcp-server, is actually more widely used, worth knowing both exist.",
+  "tags": "MCP · observability",
+  "url": "https://github.com/prometheus/prometheus-mcp",
+  "search": "prometheus mcp server official org promql thanos mimir cortex tsdb admin pab1it0 alternative",
+  "dateVerified": "2026-08-05"
+}

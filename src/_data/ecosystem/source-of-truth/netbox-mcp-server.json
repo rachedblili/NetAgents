@@ -1,0 +1,12 @@
+{
+  "category": "source-of-truth",
+  "name": "NetBox MCP Server",
+  "maker": "NetBox Labs (official)",
+  "statusClass": "active",
+  "statusLabel": "actively developed",
+  "description": "NetBox Labs' own MCP server for NetBox, the widely used source-of-truth platform for network inventory, IPAM, and topology. Built with FastMCP, read-only by design, and works across every NetBox core object type (DCIM, IPAM, circuits, virtualization). Supports global search, field filtering to control token usage, and pagination, aimed at letting an agent query real network state instead of general knowledge.",
+  "tags": "MCP · source of truth",
+  "url": "https://github.com/netboxlabs/netbox-mcp-server",
+  "search": "netbox mcp server netboxlabs official fastmcp read-only dcim ipam circuits virtualization",
+  "dateVerified": "2026-08-05"
+}

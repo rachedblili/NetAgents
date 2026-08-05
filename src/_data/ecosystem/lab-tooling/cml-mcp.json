@@ -1,0 +1,12 @@
+{
+  "category": "lab-tooling",
+  "name": "cml-mcp",
+  "maker": "xorrkaz (community)",
+  "statusClass": "active",
+  "statusLabel": "actively developed",
+  "description": "An MCP server for Cisco Modeling Labs that lets an agent build lab topologies and query node status from plain-language requests. Handy for spinning up test environments without hand-writing topology files, and a good low-stakes way to try agent-driven networking without touching production.",
+  "tags": "labs · CML",
+  "url": "https://github.com/xorrkaz/cml-mcp",
+  "search": "cml-mcp xorrkaz cisco modeling labs lab provisioning natural language",
+  "dateVerified": "2026-07-31"
+}

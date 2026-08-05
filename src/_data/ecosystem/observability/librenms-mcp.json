@@ -1,0 +1,12 @@
+{
+  "category": "observability",
+  "name": "LibreNMS MCP",
+  "maker": "mhajder (community)",
+  "statusClass": "active",
+  "statusLabel": "actively developed",
+  "description": "A Python MCP server for LibreNMS covering devices, ports, alerts, inventory, locations, and logs, with both read and write operations rather than a read-only slice. Ships as a PyPI package and Docker image, with SSL verification, rate limiting, and logging controls built in. Smaller and newer than the Zabbix and Prometheus MCP servers here, worth watching rather than treating as mature.",
+  "tags": "MCP · observability",
+  "url": "https://github.com/mhajder/librenms-mcp",
+  "search": "librenms mcp server mhajder python monitoring devices ports alerts read write",
+  "dateVerified": "2026-08-05"
+}
