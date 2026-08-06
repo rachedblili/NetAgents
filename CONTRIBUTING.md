@@ -22,7 +22,7 @@ This is a one-person, hand-checked project — see the [About page](https://neta
 
 ## What happens after you submit
 
-I check it, and if it lands, it gets credited in the directory's "recently corrected" note — being right beats being fast, and I'd rather this visibly get checked by more than one set of eyes. There's no SLA; it's genuinely one person doing this alongside other work.
+I check it, and if it lands, it gets credited in that section's "recently corrected" note (directory or ecosystem, whichever it applies to) — being right beats being fast, and I'd rather this visibly get checked by more than one set of eyes. There's no SLA; it's genuinely one person doing this alongside other work.
 
 ## Pull requests
 

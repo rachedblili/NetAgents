@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "date": "2026-08-05",
+    "section": "ecosystem",
+    "note": "Added the Community & Further Reading category",
+    "entryId": "community",
+    "creditedTo": "Chris Grundemann, Network Automation Forum"
+  },
+  {
+    "date": "2026-08-05",
+    "section": "ecosystem",
+    "note": "Added the AI Security category",
+    "entryId": "security",
+    "creditedTo": "Chris Whalen, atSign"
+  }
+]

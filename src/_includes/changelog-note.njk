@@ -1,0 +1,10 @@
+{% macro note(items) %}
+{% if items.length %}
+<div class="note">
+  <span class="note-label">Recently corrected</span>
+  {% for change in items | reverse %}
+  <p>{{ change.date | shortDate }}: {{ change.note }}{% if change.entryId %} (<a href="#{{ change.entryId }}">{{ change.entryId }}</a>){% endif %}{% if change.creditedTo %}, thanks to {{ change.creditedTo }}{% endif %}.</p>
+  {% endfor %}
+</div>
+{% endif %}
+{% endmacro %}

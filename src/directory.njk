@@ -5,6 +5,7 @@ navCurrent: directory
 wideFooter: true
 ---
 {% extends "base.njk" %}
+{% from "changelog-note.njk" import note as changelogNote %}
 
 {% block railnote %}{{ agents.length }} entries, most recently checked {{ agents | latestVerified | shortDate }}. See <a href="/about/">methodology</a>.{% endblock %}
 
@@ -19,14 +20,7 @@ wideFooter: true
 
 <section class="section-tight">
   <div class="wrap wrap-wide">
-    {% if changelog.length %}
-    <div class="note">
-      <span class="note-label">Recently corrected</span>
-      {% for change in changelog | reverse %}
-      <p>{{ change.date | shortDate }}: {{ change.note }}{% if change.entryId %} (<a href="#{{ change.entryId }}">{{ change.entryId }}</a>){% endif %}{% if change.creditedTo %}, thanks to {{ change.creditedTo }}{% endif %}.</p>
-      {% endfor %}
-    </div>
-    {% endif %}
+    {{ changelogNote(changelog | forSection("directory")) }}
 
     <div class="filter-bar">
       <button class="filter-chip is-active" data-filter="all" type="button">All</button>

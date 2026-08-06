@@ -5,6 +5,7 @@ navCurrent: ecosystem
 wideFooter: true
 ---
 {% extends "base.njk" %}
+{% from "changelog-note.njk" import note as changelogNote %}
 
 {% block railnote %}{{ ecosystem.length }} entries, most recently checked {{ ecosystem | latestVerified | shortDate }}. See <a href="/about/">methodology</a>.{% endblock %}
 
@@ -19,6 +20,8 @@ wideFooter: true
 
 <section class="section-tight">
   <div class="wrap wrap-wide">
+    {{ changelogNote(changelog | forSection("ecosystem")) }}
+
     <div class="filter-bar">
       <button class="filter-chip is-active" data-filter="all" type="button">All</button>
       {% for cat in ecosystemCategories %}

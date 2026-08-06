@@ -25,6 +25,10 @@ module.exports = function (eleventyConfig) {
     items.reduce((max, i) => (i.dateVerified > max ? i.dateVerified : max), items[0].dateVerified)
   );
 
+  eleventyConfig.addFilter("forSection", (items, section) =>
+    items.filter((i) => i.section === section)
+  );
+
   eleventyConfig.addCollection("articles", (collectionApi) => {
     return collectionApi.getFilteredByGlob("src/articles/*.njk").sort((a, b) => b.date - a.date);
   });
